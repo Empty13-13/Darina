@@ -1,0 +1,17 @@
+._title {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 109.6%;
+  color: #2B2A29;
+  @include adaptiveValue('font-size',48,30);
+}
+
+.simplebar-scrollbar::before {
+  background-color: $redColor !important;
+  opacity: 1 !important;
+}
+.simplebar-track {
+  background: rgba(196, 196, 196, 0.5);
+  border-radius: 11px;
+}

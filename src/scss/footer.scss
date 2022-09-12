@@ -1,0 +1,262 @@
+.footer {
+  position: relative;
+  z-index: 99;
+  
+  &__wrapper {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  }
+  
+  &__container {
+  }
+  
+  &__body {
+    padding: 38px 0px 26px 0px;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: $mobileSmall) {
+      justify-content: center;
+    }
+  }
+  
+  &__column {
+  }
+}
+
+.left-footer {
+  margin-right: 15px;
+  
+  @media (max-width:$mobileSmall){
+    margin-right: 0;
+  }
+  
+  &__body {
+    display: flex;
+    flex-direction: column;
+    
+    @media (max-width:$mobileSmall){
+      justify-content:center;
+      align-items: center;
+    }
+  }
+  
+  &__logo {
+    max-width: 76px;
+    margin-bottom: 22px;
+    
+    img {
+      max-width: 100%;
+    }
+  }
+  
+  &__copyright {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000000;
+    margin-bottom: 20px;
+  }
+  
+  &__policy {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000000;
+    transition: color 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+        color: $redColor;
+      }
+    }
+  }
+}
+
+.center-footer {
+  margin-right: 15px;
+  flex: 0 1 455px;
+  display: flex;
+  @media (max-width: $mobile) {
+    display: none;
+  }
+  
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  &__menu {
+    width: 100%;
+    padding-bottom: 25px;
+    margin-bottom: 35px;
+    position: relative;
+    
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background-color: rgba(43, 42, 41, 0.15);
+    }
+    
+  }
+  
+  &__list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+    li {
+      margin-right: 9px;
+      
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  
+  &__link {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: #07060A;
+    transition: color 0.3s ease 0s;
+    
+    &._active {
+      font-weight: 600;
+      color: #E0171B;
+    }
+    
+    @media (any-hover: hover) {
+      &:hover {
+        color: $redColor;
+      }
+    }
+  }
+  
+  &__information {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000000;
+    transition: color 0.3s ease 0s;
+    
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+        color: $redColor;
+      }
+    }
+    
+    @media (max-width:$mobile){
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.right-footer {
+  
+  @media (max-width: $mobileSmall) {
+    display: none;
+  }
+  
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  &__phone {
+    margin-bottom: 30px;
+    
+    .phone-header__column {
+      @media (max-width: 720px) {
+        display: block;
+      }
+    }
+  }
+  
+  &__mail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+    transition: color 0.3s ease 0s;
+    margin-bottom: 30px;
+    
+    @media (any-hover: hover) {
+      &:hover {
+        color: $redColor;
+      }
+    }
+    
+    span {
+      margin-right: 14px;
+    }
+    
+    @media (max-width: $tablet) {
+      font-size: 14px;
+      line-height: 17px;
+    }
+    
+  }
+  
+  &__location {
+    display: flex;
+    
+    & > span {
+      margin-right: 14px;
+    }
+  }
+  
+  &__location-text {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+    transition: color 0.3s ease 0s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+    @media (any-hover: hover) {
+      &:hover {
+        color: $redColor;
+      }
+    }
+    
+    @media (max-width: $tablet) {
+      font-size: 14px;
+      line-height: 17px;
+    }
+    
+    span {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 10px;
+      line-height: 12px;
+      color: #7B7B7B;
+    }
+  }
+}
